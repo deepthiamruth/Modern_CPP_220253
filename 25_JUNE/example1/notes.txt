@@ -1,0 +1,22 @@
+week 2 : Modern cpp starts
+
+functional programming
+
+objective:
+    I want to write an "adaptor function which accept
+    a) vector of integer 32 bit 
+    b)  a fun that accept single integern32 value and return void
+
+    Adaptor should "map" function provided onto the data provided
+
+
+
+Make a software that "Does something " after account is registered with the bank
+
+DoSomething(  action  ){
+    action (emailId, number);
+}
+
+DoSomething(sendWelcomeEmail)
+
+DoSomething(sendWhatsappMsgAndEmail)

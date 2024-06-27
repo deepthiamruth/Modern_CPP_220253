@@ -1,0 +1,10 @@
+RAII : Resource Acquisition Is Initialization
+
+Resouce:
+    1) Memory 
+    2) open files
+
+
+    Main calls Magic()
+    In magic function we create wr_obj (stack memory)
+    wr_obj stores 

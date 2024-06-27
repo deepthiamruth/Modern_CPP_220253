@@ -1,0 +1,16 @@
+Employee has a project
+
+Aggregation : Aggregated class (employees) doesnot control the lifetime of the aggregating class(project)
+
+ Deleting employee doesnot delete project
+
+ class Employee
+  id : unsigned int
+  name : string
+  
+
+
+  class project
+   id: string 
+   team size : unsigned int
+   budget : project

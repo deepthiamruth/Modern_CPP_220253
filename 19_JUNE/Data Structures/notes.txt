@@ -1,0 +1,11 @@
+Employee 1: 27
+Employee 2 : 34
+Employee 3 : 12
+
+Arrangements or structuring of data
+
+A) consecutively , one after the other in memory
+    a) no option to add (array)
+    b) we can add more data values if required in future (vector)
+
+-------------------------------------------------------------------------------

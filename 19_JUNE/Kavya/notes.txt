@@ -1,0 +1,14 @@
+Make a class engine with the following attributes
+
+ a,an integer id
+ b,integer value for horsepower
+ c,float value torque
+Enable default constuctor
+Disable copy constuctor & all remaining special member functions 
+Enable a parameterized constuctor to initialzie all members
+
+In functionalities.cpp functionalities
+1,create engines : create N objects on the heap
+2,averagehorsepower : return the average of all the valid objects's horsepower
+3,findtorquebyid : user gives an ID,search it ,return respective torque
+4,FindHorsePowerForMinTorqueEngine : Find Engine with min torque and return its horsepower

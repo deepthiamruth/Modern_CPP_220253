@@ -1,0 +1,10 @@
+Modern cpp 
+     - All version of c++ since c++11
+     cpp is revised and updated every 3 years
+     so versions are c++11, c++ 14, c++ 17;
+5 weeks
+
+A-> essentials / fundmentals
+b-> functional programming in modern cpp(lambda)
+c-> concurrency and cpp 17
+d-> STL data structures and algorithms

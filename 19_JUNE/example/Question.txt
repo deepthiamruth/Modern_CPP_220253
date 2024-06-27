@@ -1,0 +1,19 @@
+Make a class engine with the following attributes
+
+a. an integer id
+b. integer value for horsepower
+c. float value torque
+
+Enable default constructor
+Disable copy constructor and all remaining special member functions
+Enable a parametrized constructor to initialize all members
+
+In functionalities:
+1. createEngines: Create N objects on the heap
+                store in a c-style array
+
+2. AverageHorsePower: Return the average of all valid object's horsepower
+
+3. FindTorqueById: Return the respective engine for the user given id
+
+4.FindHorsePowerForMinTorqueEngine: Find engine with minimum torque and return its horsepower

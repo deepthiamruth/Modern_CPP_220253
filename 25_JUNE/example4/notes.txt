@@ -1,0 +1,13 @@
+Create an adaptor which accepts
+
+a) a data container of string values
+
+b) a function with the following signature
+    i) input parameter :one string by lvalue reference 
+    ii) output: void
+
+    Adaptor should be used to perform operations on string values which are
+
+    1) identify vowels
+    2) print the last 3 characters of each string 
+    3) print the first non vowel character of each string 

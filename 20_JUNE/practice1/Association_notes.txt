@@ -1,0 +1,3 @@
+FullTimeEmployees is a type of Employee 
+Cricket is a type of sport
+BankAccount has a debitcard// cannot be done using inheritance , can be done using Association
