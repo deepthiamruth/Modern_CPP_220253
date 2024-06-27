@@ -1,7 +1,18 @@
 #ifndef FUNCTIONALITIES_H
 #define FUNCTIONALITIES_H
 #include "Employee.h"
-void CreateObjects(Employee ** employees, Project ** projects, unsigned int size);
+#include <list>
 
-void Deallocate (Employee** employees, Project ** projects, unsigned int size);
+using EmployeeContainer = std:: list <Employee*>;
+using ProjectContainer=std:: list<Project*>;
+using Predicate = std:: function <bool (const Employee*)>;
+
+void CreateObjects(EmployeeContainer employees, ProjectContainer projects);
+
+void Deallocate (EmployeeContainer employees, ProjectContainer projects);
+
+// Add a feature to filter employees based on filter predicates(functional style) [FILTER LAMBDA]
+
+void FilterEmployees(Predicate fn , EmployeeContainer employees);
+
 #endif // FUNCTIONALITIES_H

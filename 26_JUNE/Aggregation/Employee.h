@@ -15,9 +15,30 @@ class Employee{
     public:
         Employee(int id, std::string name, ProjectRef ptr);
         ~Employee();
+
+
+        friend std::ostream &operator<<(std::ostream &os, const Employee &rhs) {
+            os << "_id: " << rhs._id
+               << " _name: " << rhs._name
+               << " _project: " << rhs._project.get();
+            return os;
+        }
+
+        int getid() const { return _id; }
+
+
+        std::string getname() const { return _name; }
+
+
+    
+        ProjectRef getproject() const { return _project; }
+
+        
+        
+
 };
 
-#endif 
+
 
 /*
     Replace c style arrays with vectors
@@ -27,3 +48,11 @@ class Employee{
     example 2: each employee gets bonus = 100000 / project_team size
 
 */
+
+
+    
+
+  
+
+     
+#endif 
