@@ -1,9 +1,15 @@
 #include <iostream>
-#include "Employee.h"
 #include "functionalities.h"
 int main() {
-    Employee* employees[3];
-    Project* projects[3];
-    CreateObjects(employees, projects, 3);
-    Deallocate(employees, projects, 3);
+    EmployeeContainer employees{};
+    ProjectContainer projects{};
+    CreateObjects (employees, projects);
+
+    //filter all employees whose project team count is above 10
+    auto fn = [](const Employee* emp){
+        return emp-> getproject().get().getteamsize() >10;
+        //return emp->getname() == "Harshith";
+    };
+    FilterEmployees(fn, employees);
+   // FilterEmployees(&Greater, employees);
 }

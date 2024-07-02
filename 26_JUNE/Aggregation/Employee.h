@@ -32,10 +32,6 @@ class Employee{
 
     
         ProjectRef getproject() const { return _project; }
-
-        
-        
-
 };
 
 

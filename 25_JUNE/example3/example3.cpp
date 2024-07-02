@@ -30,12 +30,15 @@ void Adaptor(Predicate fn , int* arr , unsigned int size){
         if(fn (arr[i])){
             std:: cout << arr[i] << "\t";
         }
+        //for(int32_t i=0 ;i<size ;i++){
+        //fn (arr[i]);
+        //}
     }
 }
 
 int main(){
-    auto fn = [] (int32_t number){
-        return number %2==0;
+    auto fn = [] (int32_t number){ 
+        return number %2==0; //if(number%2==0){std:: cout << number <<"\n";};
     };
     int32_t arr[3] = {11,18,21};
     Adaptor(fn, arr, 3);

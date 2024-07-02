@@ -2,7 +2,7 @@ first class functions
 
 A language is said to treat "functions" as first class if the following things are possible in the language
 
-a) functions 
+a) functions have a properly recognizable types.
 b)
 c)
 d)

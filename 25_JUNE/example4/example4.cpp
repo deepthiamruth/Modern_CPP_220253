@@ -19,7 +19,7 @@ if(data.empty()){
     std:: invalid_argument ("Null\n");
 }
 
-    for(const std:: string & st : data){
+    for(const std:: string st : data){
         func(st);
     }
 }
@@ -43,6 +43,10 @@ void FindVowels(const std:: string& val){
 }
 
 void DisplayLastThreeCharacters(const std:: string & val){
+    for(char c: val){
+        
+    }
+
 
 }
 

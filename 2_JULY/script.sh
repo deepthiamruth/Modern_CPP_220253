@@ -1,0 +1,1 @@
+for((i=0;i<50;i++)); do time  ./out  1>>output.txt; done
