@@ -22,11 +22,16 @@ void Display(const VrType & v){
 
 // if v holds alternative of type employee* fetch the data from that slot and take action
 void showPfAmount(const VrType & v){
+    bool m_flag = {false};
     if(std:: holds_alternative <Employee*>(v)){
         Employee* e = std::get<1> (v);
+        m_flag = true;
         e->CalculateMonthlyPf();
     }
-    throw std:: runtime_error("Not a valid for BusinessOwner type data");
+    if(!m_flag){
+        throw std:: runtime_error("Not a valid for BusinessOwner type data");
+    }
+   
 }
 
 void showTaxAmount(const VrType vr){
@@ -44,6 +49,8 @@ int main(){
 
     try{
         showPfAmount(vr);
+    }catch(std::runtime_error & ex){
+        std:: cerr << ex.what()<< "\n";
     }
 }
 
