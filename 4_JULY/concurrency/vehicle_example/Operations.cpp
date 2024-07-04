@@ -46,7 +46,7 @@ std::optional<VrType> Operations::ReturnMatchingInstance(std::string id)
             break;
         }
     }
-    return std::optional <VrType>();
+    return result;
 }
 
 void Operations::Deallocate()
@@ -96,7 +96,7 @@ std::optional<unsigned int> Operations::FindSeatCountForGivenId(std::string id)
     if(!matchFound && !m_data.empty()){
         std:: cerr << "Id was not found\n";
     }
-    return std::optional <unsigned int>();
+    return result;
 }
 
  void Operations::MapThreads()
