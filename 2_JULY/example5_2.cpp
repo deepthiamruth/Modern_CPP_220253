@@ -4,8 +4,8 @@
 class BankAccount
 {
 private:
-    std::mutex mt{};
-    int m_amount{1};
+    static std::mutex mt;
+    static int m_amount;
 
 public:
     BankAccount() = default;
@@ -15,11 +15,7 @@ public:
     BankAccount &operator=(BankAccount &&) = delete;
     ~BankAccount() = default;
 
-    BankAccount(int amount) : m_amount{amount}
-    {
-    }
-
-    void Deposit()
+    static void Deposit()
     {
         for (int i = 0; i < 100; i++)
         {
@@ -30,7 +26,7 @@ public:
         }
     }
 
-    void Withdraw()
+    static void Withdraw()
     {
         for (int i = 0; i < 100; i++)
         {
@@ -41,16 +37,21 @@ public:
         }
     }
 
-    int getamount() const { return m_amount; }
+    //int getamount() const { return m_amount; }
+
+    static int amount() { return BankAccount::m_amount; }
 };
+
+std::mutex BankAccount:: mt{};
+int BankAccount:: m_amount{900};
 
 int main()
 {
-    BankAccount b1{1000};
-    std::thread t1{&BankAccount::Withdraw, &b1};
-    std::thread t2{&BankAccount::Deposit, &b1};
+    //BankAccount b1{1000};
+    std::thread t1{&BankAccount::Withdraw};
+    std::thread t2{&BankAccount::Deposit};
 
     t1.join();
     t2.join();
-    std:: cout << "Final amout is : " <<  b1.getamount()  << "\n";
+    std:: cout << "Final amout is : " << BankAccount::amount() ;
 }

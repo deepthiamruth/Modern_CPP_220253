@@ -8,8 +8,6 @@ class BankAccount
 private:
     std::mutex mt{};
     int m_amount{1};
-
-    
     static BankAccount * m_instance_ptr;
     BankAccount() = default;
     BankAccount(const BankAccount &) = delete;
@@ -93,7 +91,4 @@ int main(){
     JoinThreads(threads);
     DisplayFinalAmount(*ptr);
     delete ptr;
-
-   
-
 }

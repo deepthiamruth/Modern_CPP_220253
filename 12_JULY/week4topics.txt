@@ -1,0 +1,5 @@
+Effective use of STL
+
+1) STL containers
+2) STL algorithms (more commonly used)
+3) Theoretical understanding DS and algorithms

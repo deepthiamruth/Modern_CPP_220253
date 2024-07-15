@@ -10,7 +10,7 @@ int main(){
     std:: variant<int32_t, std::string> vr;
     
     vr = n1; // n1 is assigned to variant
-
+    //std::cout<< vr << "\n";
     std:: cout << "Variant is working\n";
 
     vr=s1;

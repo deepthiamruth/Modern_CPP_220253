@@ -31,7 +31,7 @@ public:
         return m_value + other;
     };
 
-    //paran paran 
+    //param param
     int64_t operator()(){
         mt.lock();
         std:: cout <<"ID of thread operation:" << std::this_thread :: get_id() << "\n";
@@ -47,7 +47,7 @@ int main(){
     std:: thread t1 {&MathOperations :: square , &m1};
 
 
-    std:: thread t2 {std::ref(m1)}; //thread created by a functor object //object as a function
+    std:: thread t2 {std::ref(m1)}; //thread created by a functor object //operator as a function
 
     std:: thread t3 {&MathOperations :: addition , &m1 , 100};
     // you cannot capture return value from a function when executing them via std:: thread
@@ -59,7 +59,7 @@ int main(){
 
     // thread takes first parameter as function
     //cannot copy a mutex
-   //Note 1: t2 and t3 outputs will get discarded  , no way to capture them 
-   //Note 2:  all parameters passed to std:: thread constructor are taken as "call by value"
-   //threads cannot capture return value
+    //Note 1: t2 and t3 outputs will get discarded  , no way to capture them 
+    //Note 2:  all parameters passed to std:: thread constructor are taken as "call by value"
+    //threads cannot capture return value
 }

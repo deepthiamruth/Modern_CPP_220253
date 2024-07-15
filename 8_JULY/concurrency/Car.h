@@ -31,7 +31,8 @@ public:
            << " m_price: " << rhs.m_price
            << " m_seat_count: " << rhs.m_seat_count;
         return os;
-    } 
+    }
+   
 };
 
 

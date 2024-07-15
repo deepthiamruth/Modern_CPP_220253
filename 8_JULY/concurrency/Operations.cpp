@@ -34,7 +34,9 @@ void Operations::FindAverageCost()
 std::optional<VrType> Operations::ReturnMatchingInstance(std::string id)
 {
     if(m_data.empty()){
+        mt.lock();
         std:: cerr <<"empty data container\n";
+        mt.unlock();
     }
     std:: optional <VrType> result {std:: nullopt};
     bool m_id_found{false};
@@ -94,7 +96,9 @@ std::optional<unsigned int> Operations::FindSeatCountForGivenId(std::string id)
         }
     }
     if(!matchFound && !m_data.empty()){
+        mt.lock();
         std:: cerr << "Id was not found\n";
+        mt.unlock();
     }
     return result;
 }
