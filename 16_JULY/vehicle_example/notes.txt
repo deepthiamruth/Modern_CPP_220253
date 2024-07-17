@@ -1,0 +1,5 @@
+--> replace vector with unordered_map : key will be "primary key" m_id attributes
+--> value: variant of Car pointers and Bike pointers
+
+Replace raw pointers with shared_ptr
+Replace member functions in operation.cpp with regular top-level functions
