@@ -20,6 +20,8 @@ void CreateObjects(RawpointerHeap& rawPtrEmployees){
     rawPtrEmployees.emplace_back(new Employee(103, "Dhatu", 56454.0f, 32, 5.0f));
 }
 
+
+
 void CreateObjects(SmartPointersHeap& smartPtrEmployees){
     smartPtrEmployees.emplace_back( std::make_shared<Employee>(101, "Deepthi", 89754.0f, 22, 1.0f));
     smartPtrEmployees.emplace_back( std::make_shared<Employee>(102, "Adithi", 90764.0f, 25, 1.4f));
@@ -57,7 +59,9 @@ int main(){
 
     std::cout << "stack : " << std::boolalpha <<  result1 << "\n";
     std::cout << "smart ptr: " << result3 << "\n";
+
+    for(Employee* e : rawPtrEmployees){
+        delete(e);
+    }
+
 }
-
-
-

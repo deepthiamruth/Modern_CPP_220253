@@ -46,13 +46,13 @@ int main(){
         return e1.experienceYears() < e2.experienceYears();
     });
 
-    std::cout << "The name of employee with minimum experience is :" << (*result1).name() <<"\n";
+    std::cout << "The name of employee with minimum experience is :" << *result1 <<"\n";
 
     auto result2= std::min_element(
     rawPtrEmployees.begin(),
     rawPtrEmployees.end(),
     [](const Employee* e1, const Employee* e2){
-        return e1->experienceYears() < e2->experienceYears();
+        return e1->experienceYears() > e2->experienceYears();
     });
 
     std::cout << "The name of employee with minimum experience is :" << (*result2)->name() <<"\n";

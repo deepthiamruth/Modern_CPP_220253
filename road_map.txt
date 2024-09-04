@@ -1,0 +1,105 @@
+ROAD MAP FOR GOOD PACKAGE(1 CR)
+
+NOTE:
+1) Experience is intangible and beyond the scope of this road map . higher the experience , the better salary
+2) The roadmap is guideline , implementation is upto the follower!
+3) The roadmap is industry proven , recession- resistance, honest, malpratice ignoring, no cheating(No loopholes)
+
+
+15 STEPS:
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+EASY (1 month - 3 months)
+1) Absolute mastering in atleast 1 language, respectable knowledge in 2 more
+    Preferred combination : a system language, on OOP language , scripting language
+                example:       c++/Rust   |  Java/Kotlin/C++   |   Python or shell  scripting      
+
+2)Linear Data Structure (Arrays, lists, stacks, Queues, vector)
+
+3) Good at Command-Line
+    - Unix/Linux or  Powershell in windows! (depends on job!)
+[ 
+    basic utilities (copy , move, undo, redo, create etc...), 
+    some helpful tools ,
+    regex,
+    find command/equivalent,
+    file and user permissions,
+    sudo privileges,
+    chroot and filesystems,
+    damenons and pors etc
+]
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+MEDIUM (Atleast 6 months)
+
+4) Operating System Fundamentals (1 month)
+    -process lifecycle , threads , scheduling , critical section , virtual memory, Inter Process Communication(IPC) , Signals
+    (Not just theory , actually use of these concepts!) - best to use them using C
+
+5) Computer Architecture (At least the essential concepts!)
+    - Good understanding of cache , buses, memory, components interact with each other
+    - Direct connection with OS
+
+6) Computer Networks (A bit more than just basics)
+    -ip, ports, OSI Layer, protocols
+    -VLANs, VPN , Subnetting
+    -Socket programming, firewalls, algorithms for networks [optional*]
+
+    NOTE: optional only if you are a developer. If your job is CI/CD, virtualization , containerization , IASS, it is mandatory
+
+7) Database Management Systems
+    -SQL, and NoSQL . One each[e.g. MariaDB & MongoDB]
+    - applied knowledge , not just theoretical 
+    Do actual joins , CRUD, permissions, export , import , etc.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+HIGHER_INTERMEDIATE 
+
+8) Virtualization Technologies
+    -Hypervisors, Creating and Managing VMs, advantages and disadvantages
+    - Hands on creations of VMs on laptops/Desktops is desired!
+
+9) Containerization 
+    - what are containers, VMs v/s Container, Creating container for development
+    - Docker, podman , etc
+    - After learning containers, you "MAY HAVE TO" learn container orchestration
+        tools like "Kubernetes aka K8s"
+10) API Consumption / Testing Technologies
+    - POSTMAN! (Allows you to test whether your APIs are working or not)
+    - Libraries for API Consumption : e.g: requests in python , curl on C, etc
+    - Learn how to integrate data from APIs into apps including 
+        -Authentication , headers , status code, etc
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ADVANCED / ULTRA_PRO_MAX TOPICS (May or may not want to / have to do)
+
+
+11) Non - Linear Data Structure 
+    - trees, graphs, graph theory , implementation Of tree based data structures
+    - processing data to solve problems using trees and graphs
+
+12) Advanced algorithms
+    - Graph algorithms, greedy , NP , P problems , etc
+    - These section to connect Non-linear data structure
+
+13) Competitive Coding skills [ THE WORST PART OF THE MILESTONE ]
+    - start with easy problems 
+    - Buy a pro subscription of codechef , Leetcode , Algoexpert.io etc
+    - Practice intermediate & Advanced problems under pro licence 
+
+NOTE: Competitive coding is not about remembering exact solution by memorizing them. It is about recognizing problems that are similar to the ones you have solved so you can build solutions quickly
+
+14) Proper Version control
+    - good understanding of atleast one Version control tool (e.g. git)
+    - Work with a team so that you understand challenges of version control
+
+15) Cloud Computing
+    - Pre- requistics : computer networks,technical exposure!
+    - Either AWS, AZURE or GCP (in this preferential order) must be learnt
+    - Actual use of popular services (e.g route 53, EC2 , DynamicDB of AWS)
+
+     
+
+

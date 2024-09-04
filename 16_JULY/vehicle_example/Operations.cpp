@@ -1,10 +1,10 @@
 #include "Operations.h"
-std::mutex mt;
+
 void CreateCarsAndBikes(DataContainer& data)
 {
     data.emplace(
         std::piecewise_construct,
-        std::forward_as_tuple("c6701"),
+        std::forward_as_tuple("c6701"), //std::tuple("c6701"), 
         std::forward_as_tuple(std::make_shared <Car>("c6701",786324.6f, 3 ))
     );
     data.emplace(
@@ -24,7 +24,7 @@ void CreateCarsAndBikes(DataContainer& data)
     );
 }
 
-void FindAverageCost(DataContainer & data)
+void FindAverageCost(const DataContainer & data)
 {
     float total{0.0f};
     for(auto& [k,v] : data){
@@ -35,7 +35,7 @@ void FindAverageCost(DataContainer & data)
     std::cout << total/data.size() << "\n";
 }
 
-std::optional<VrType> ReturnMatchingInstance(DataContainer& data, std::string id)
+std::optional<VrType> ReturnMatchingInstance(const DataContainer& data, const std::string id)
 {
     if(data.empty()){
         std:: cerr <<"empty data container\n";
@@ -54,7 +54,7 @@ std::optional<VrType> ReturnMatchingInstance(DataContainer& data, std::string id
 }
 
 
-void DisplayInsuranceAmount(DataContainer& data)
+void DisplayInsuranceAmount(const DataContainer& data)
 {
     if(data.empty()){
         mt.lock();
@@ -69,7 +69,7 @@ void DisplayInsuranceAmount(DataContainer& data)
 
 }
 
-std::optional<unsigned int> FindSeatCountForGivenId( DataContainer& data, std::string id)
+std::optional<unsigned int> FindSeatCountForGivenId(const DataContainer& data, const std::string id)
 {
     if(data.empty()){
         std:: cerr << "Empty data\n";
@@ -94,7 +94,7 @@ std::optional<unsigned int> FindSeatCountForGivenId( DataContainer& data, std::s
 }
 
 
-void MapThreads(DataContainer &data, ThreadContainer &threads)
+void MapThreads(const DataContainer &data, ThreadContainer &threads)
 {
     threads.emplace_back(&FindAverageCost, std::ref(data));
     threads.emplace_back(&DisplayInsuranceAmount, std::ref(data));

@@ -11,12 +11,12 @@ int main(){
 
     //step 3: serial functions
 
-    std:: optional <unsigned int > result1 = Operations :: FindSeatCountForGivenId ("c6701");
+    std:: optional <unsigned int > result1 =  Operations :: FindSeatCountForGivenId ("c6701");
     if(result1.has_value()){
         std:: cout << "Seat count for id is: " << result1.value() << "\n";
     }
 
-    std::optional <VrType> result2 = Operations:: ReturnMatchingInstance("b6601");
+    std::optional <VrType> result2 = Operations:: ReturnMatchingInstance("c6701");
 
     if(result2.has_value()){
         std:: cout << "Matching instance found :" << "\n";

@@ -9,9 +9,9 @@ using EmployeePtr = std::shared_ptr <Employee>;
 using SmartPointersHeap = std::list <EmployeePtr>;
 
 void CreateObjects(StackMemory& stackEmployees){
-    stackEmployees.emplace_back(101, "Deepthi", 89754.0f, 22, 1.0f);
-    stackEmployees.emplace_back(102, "Adithi", 90764.0f, 20, 1.4f);
-    stackEmployees.emplace_back(103, "Dhatu", 56454.0f, 23, 5.0f);
+    stackEmployees.emplace_back(101, "Deepthi", 89754.0f, 22, 5.0f);
+    stackEmployees.emplace_back(102, "Adithi", 90764.0f, 20, 6.0f);
+    stackEmployees.emplace_back(103, "Dhatu", 56454.0f, 23, 7.0f);
 }
 
 void CreateObjects(RawpointerHeap& rawPtrEmployees){
@@ -43,7 +43,7 @@ int main(){
     stackEmployees.begin(),
     stackEmployees.end(),
     [](const Employee& e1, const Employee& e2){
-        return e1.experienceYears() < e2.experienceYears(); 
+        return e1.experienceYears() > e2.experienceYears(); 
     });
 
     std::cout << "The name of employee with maximum experience is :" << (*result1).name() <<"\n";

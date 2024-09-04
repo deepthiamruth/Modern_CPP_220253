@@ -1,4 +1,4 @@
-#//Move is enabled but copy is not enabled
+//Move is enabled but copy is not enabled
 #include "Employee.h"
 #include<queue>
 
@@ -36,7 +36,7 @@ int main(){
     [Cpp is a stringly & statically typed language]
     1) In cpp everything must have a type , including functions!
 
-    2) A lambda in c+= is an object that behaves like a function.
+    2) A lambda in c++ is an object that behaves like a function.
 
     3) Lambda is always implemented by the compiler by creating a class during compilation. Name of this class is unknown to us!
 

@@ -48,7 +48,7 @@ std::optional<VrType> Operations::ReturnMatchingInstance(std::string id)
     }
     return result;
 }
-
+ 
 void Operations::Deallocate()
 {
     if(m_data.empty()){

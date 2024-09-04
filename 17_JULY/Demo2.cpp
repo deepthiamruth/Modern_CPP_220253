@@ -42,12 +42,12 @@ int main(){
         stackEmployees.begin(), 
         stackEmployees.end(), 
         [] (const Employee& e) { return e.age()>20; }) << "\n";
- 
+
     std::cout << std::count_if(
         rawPtrEmployees.begin(),
          rawPtrEmployees.end(), 
          [] (const Employee* e) { return e->age()>20; }) << "\n";
- 
+
 //==================================================================================
    std::vector<Employee> result{};
 
@@ -56,15 +56,13 @@ int main(){
     std::copy_if( //copy should be enabled
     stackEmployees.begin(), 
     stackEmployees.end(),
-    std::inserter(result, result.begin()), // create a inserter , if destination does not have memory allocate memory 
+    std::inserter(result, result.begin()), // create an inserter , if destination does not have memory allocate memory 
     [](const Employee& e){return e.age() >20;}
    );
    for(Employee& e :result){
     std::cout << "copy if age >20 " << e << "\n";
    }
   
-
-
 
     //Example2 ---> copy n no of items
     std::vector <Employee> result2{};

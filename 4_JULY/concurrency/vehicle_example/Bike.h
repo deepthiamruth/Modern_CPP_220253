@@ -13,8 +13,8 @@ public:
     ~Bike()=default;
     Bike (const Bike & ) = delete;
     Bike(Bike&& ) = delete;
-    Bike& operator = (const Bike &) = delete;
-    Bike& operator = (Bike&&) = delete;
+    Bike& operator= (const Bike &) = delete;
+    Bike& operator= (Bike&&) = delete;
     float InsuranceAmount();
 
     Bike(std:: string id, float price);

@@ -25,29 +25,34 @@ using VrType = std::variant <std::shared_ptr <Car> , std::shared_ptr <Bike>>;
 using DataContainer = std::unordered_map<std::string, VrType>;
 using ThreadContainer = std:: list <std::thread>;
 
+//Note: inline variable (c++17) allows a variable to be reinitialized in a different unit file(cpp file) so no issues of redeclaration error!
+
+inline std::mutex mt;
+inline ThreadContainer threads;
+
 void CreateCarsAndBikes(DataContainer&);
 
 
     //Find avg cost : use visit fun to do this , Both Car and Bike have a m_price attribute. We can use their getter fun to calculate total
-void FindAverageCost(DataContainer& );
+void FindAverageCost(const DataContainer& );
    
 
     //may or may not return variant 
     //return matching instnace : variant whose id matches with the id passed
-std::optional <VrType> ReturnMatchingInstance(DataContainer& , std::string id);  
+std::optional <VrType> ReturnMatchingInstance(const DataContainer& , const std::string id);  
 
 
-void DisplayInsuranceAmount(DataContainer& data); 
+void DisplayInsuranceAmount(const DataContainer& data); 
 
     //s1: id found , matches with a car, seat count returned 
     //s2: id found , matches with bike not car  ----> nullopt
     //s3: id not found ---> nullopt (print a msg before return)
-std::optional <unsigned int> FindSeatCountForGivenId(DataContainer& , std::string id);
+std::optional <unsigned int> FindSeatCountForGivenId(const DataContainer& ,const  std::string id);
 
 
 
     //Mapthreads:attach a thread to a functionality 
-void MapThreads(DataContainer& data, ThreadContainer& threads);
+void MapThreads(const DataContainer& data, ThreadContainer& threads);
 
 
 
