@@ -12,7 +12,7 @@ public:
     ~Employee() = default;
     Employee(const Employee &) = default;
     Employee( Employee &&) = delete;
-    Employee& operator =(const Employee &) = default;
+    Employee& operator=(const Employee &) = default;
     Employee operator=(Employee &&) = delete;
 
     Employee(std:: string name, float salary): m_name{name}, m_salary {salary}{

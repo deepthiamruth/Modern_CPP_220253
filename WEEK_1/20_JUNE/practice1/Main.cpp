@@ -3,6 +3,5 @@
 #include <vector>
 int main(){
     std::vector <BankAccount* > accounts;
-    CreateObjects(accounts  , 3);
-    
+    CreateObjects(accounts  , 3); 
 }
